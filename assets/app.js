@@ -1,6 +1,6 @@
     
 
-    // Начало задачи
+// Начало задачи
     const mathObj = {
         sum: (a, b) => a + b,                                   //Сложение
         sub: (a, b) => a - b,                                   //Вычитание
@@ -20,10 +20,11 @@
         }
         return 'Error'
     }
-    // Конец задачи
-    console.log(calculate(4, 'fact', 5));
+// Конец задачи
 
-    // Дополение - Визуальная логика
+    console.log(calculate(4, 'sum', 5));
+
+// Дополнение - Визуальная логика и ввод данных
 
     let firstNumber = 0;
     let secondNumber = 0;
@@ -34,8 +35,7 @@
 
     document.querySelectorAll('.num').forEach((item) => item.addEventListener('click', render));
     document.querySelectorAll('.act').forEach((item) => item.addEventListener('click', action));
-    document.querySelector('#equals').addEventListener('click', equals);
-    document.querySelector('#fact').addEventListener('click', equals);
+    document.querySelectorAll('#equals, #fact').forEach((item) => item.addEventListener('click', equals));
     document.querySelector('#clear').addEventListener('click', clear);
     
     function render() {
@@ -54,7 +54,13 @@
     }
 
     function action() {
-        if (!screen.innerHTML) return 0;
+        
+        if (!screen.innerHTML && !firstView.innerHTML) return 0;
+        if (firstView.innerHTML && operationView.innerHTML) {
+            operationView.innerHTML = this.innerHTML;
+            operation = this.value;
+            return 0;
+        }
             firstNumber = +screen.innerHTML;
             operation = this.value;
             firstView.innerHTML = firstNumber;

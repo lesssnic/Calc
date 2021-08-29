@@ -2,11 +2,11 @@
 
     html {
         background: black;
-        color: #6cacc5;
+        color: #73b3cc;
       }
       
       body {
-        color: #6cacc5;
+        color: #73b3cc;
         font: 300 18px/1.6 "Source Sans Pro",sans-serif;
         margin: 0;
         padding: 5em 0 2em;
@@ -19,7 +19,9 @@
         width: 10em;
 
       }
-
+      #viewer {
+        border: 1px solid #b49130;
+      }
       .viewer {
         color: orange;
         line-height: 3em;
@@ -32,7 +34,7 @@
       
       button {
         border: 0;
-        background: #6cacc5;
+        background: #73b3cc;
         color: white;
         cursor: pointer;
         float: left;
