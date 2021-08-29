@@ -1,0 +1,43 @@
+
+
+    html {
+        background: black;
+        color: #6cacc5;
+      }
+      
+      body {
+        color: #6cacc5;
+        font: 300 18px/1.6 "Source Sans Pro",sans-serif;
+        margin: 0;
+        padding: 5em 0 2em;
+        text-align: center;
+      }
+      
+      .calculator {
+        font-size: 28px;
+        margin: 0 auto;
+        width: 10em;
+
+      }
+
+      .viewer {
+        color: orange;
+        line-height: 3em;
+        text-align: right;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 10em;
+        height: 3em;
+      }
+      
+      button {
+        border: 0;
+        background: #6cacc5;
+        color: white;
+        cursor: pointer;
+        float: left;
+        font: inherit;
+        margin: 0.25em;
+        width: 2em;
+        height: 2em;
+      }
